@@ -1,0 +1,24 @@
+Config warnings:
+- plugins.entries.memory-lancedb-pro: plugin disabled (memory slot set to "memory-core") but config is present
+[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: memory-lancedb-pro (/Users/maoqiu/.openclaw/extensions/memory-lancedb-pro/index.ts), openclaw-qqbot (/Users/maoqiu/.openclaw/extensions/openclaw-qqbot/dist/index.js), openclaw-weixin (/Users/maoqiu/.openclaw/extensions/openclaw-weixin/index.ts). Set plugins.allow to explicit trusted ids.
+[qqbot-channel-api] Registered QQ channel API proxy tool
+[qqbot-remind] Registered QQBot remind tool
+[image-generation/openai] image auth selected: provider=openai-codex mode=oauth transport=codex-responses requestedModel=gpt-image-2 responsesModel=gpt-5.4 timeoutMs=180000
+{
+  "ok": true,
+  "capability": "image.generate",
+  "transport": "local",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "attempts": [],
+  "outputs": [
+    {
+      "path": "/Users/maoqiu/.openclaw/workspace/grad-persona-test/assets/tangseng.png",
+      "mimeType": "image/png",
+      "size": 1639604,
+      "width": 1024,
+      "height": 1024,
+      "revisedPrompt": "MBTI / 16personalities style polished modern character avatar card illustration, Chinese graduate student archetype, clean semi-realistic digital illustration, colorful symbolic academic background, centered full character portrait, no text, no watermark, no logo. Character concept: 学术唐僧, a calm human researcher graduate student who preaches method and theory, holding conference slides and a roadmap scroll, gentle serious expression, wise but slightly verbose vibe. Surround with many floating PPT page motifs and route-map symbols, academic iconography, subtle conference atmosphere. Warm gold palette with soft accent colors. Full body centered on a stylish character card composition. Important anatomy constraints: exactly two arms and exactly two normal human hands, no extra limbs, no duplicated fingers, no deformed anatomy."
+    }
+  ]
+}

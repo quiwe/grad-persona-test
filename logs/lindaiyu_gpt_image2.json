@@ -1,0 +1,24 @@
+Config warnings:
+- plugins.entries.memory-lancedb-pro: plugin disabled (memory slot set to "memory-core") but config is present
+[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: memory-lancedb-pro (/Users/maoqiu/.openclaw/extensions/memory-lancedb-pro/index.ts), openclaw-qqbot (/Users/maoqiu/.openclaw/extensions/openclaw-qqbot/dist/index.js), openclaw-weixin (/Users/maoqiu/.openclaw/extensions/openclaw-weixin/index.ts). Set plugins.allow to explicit trusted ids.
+[qqbot-channel-api] Registered QQ channel API proxy tool
+[qqbot-remind] Registered QQBot remind tool
+[image-generation/openai] image auth selected: provider=openai-codex mode=oauth transport=codex-responses requestedModel=gpt-image-2 responsesModel=gpt-5.4 timeoutMs=180000
+{
+  "ok": true,
+  "capability": "image.generate",
+  "transport": "local",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "attempts": [],
+  "outputs": [
+    {
+      "path": "/Users/maoqiu/.openclaw/workspace/grad-persona-test/assets/lindaiyu.png",
+      "mimeType": "image/png",
+      "size": 1619849,
+      "width": 1024,
+      "height": 1024,
+      "revisedPrompt": "MBTI / 16personalities style character avatar card illustration, polished modern character card, Chinese graduate student archetype, clean semi-realistic digital illustration, colorful symbolic academic background, centered full character portrait, no text, no watermark, no logo. Exactly one character, full body, anatomically correct with exactly two arms and two normal human hands, no extra limbs or fingers. Character concept: 学术林黛玉, sensitive elegant graduate student writer, delicate human researcher holding reviewer comments papers in one hand and a pen in the other, soft rainy flower-like academic atmosphere, emotionally nuanced expression, purple and pink palette, literary, refined, gentle melancholic mood. Academic symbolic background with subtle books, papers, flowers, rain motifs, and scholarly ambiance. High polish, modern character card composition, no text."
+    }
+  ]
+}
