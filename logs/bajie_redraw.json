@@ -1,0 +1,24 @@
+Config warnings:
+- plugins.entries.memory-lancedb-pro: plugin disabled (memory slot set to "memory-core") but config is present
+[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: memory-lancedb-pro (/Users/maoqiu/.openclaw/extensions/memory-lancedb-pro/index.ts), openclaw-qqbot (/Users/maoqiu/.openclaw/extensions/openclaw-qqbot/dist/index.js), openclaw-weixin (/Users/maoqiu/.openclaw/extensions/openclaw-weixin/index.ts). Set plugins.allow to explicit trusted ids.
+[qqbot-channel-api] Registered QQ channel API proxy tool
+[qqbot-remind] Registered QQBot remind tool
+[image-generation/openai] image auth selected: provider=openai-codex mode=oauth transport=codex-responses requestedModel=gpt-image-2 responsesModel=gpt-5.4 timeoutMs=180000
+{
+  "ok": true,
+  "capability": "image.generate",
+  "transport": "local",
+  "provider": "openai",
+  "model": "gpt-image-2",
+  "attempts": [],
+  "outputs": [
+    {
+      "path": "/Users/maoqiu/.openclaw/workspace/grad-persona-test/assets/bajie.png",
+      "mimeType": "image/png",
+      "size": 1641356,
+      "width": 1024,
+      "height": 1024,
+      "revisedPrompt": "MBTI 16 personalities style character avatar illustration, polished modern character card, cute humorous academic persona named 学术八戒, Chinese graduate student conference snack hunter, sitting at a conference tea break table with cake and coffee, tired but lovable expression, warm pink palette, academic conference background, clean semi-realistic digital illustration, character card composition, no text, no watermark, no logo. IMPORTANT anatomy: exactly two arms and exactly two hands, normal human hands with five fingers each, no extra limbs, no extra hands, no duplicated arms, hands clearly visible and anatomically correct."
+    }
+  ]
+}
