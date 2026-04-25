@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- build:16-personas-202604260247 -->
+<!-- build:16-personas-202604260312 -->
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
@@ -35,7 +35,7 @@ body.resultMode{overflow:auto}
 </head>
 <body>
 <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-<header><div class="badge">🧑‍🔬 研究生生存学 × 学术人格</div><h1>研究生<br>学术人格测验</h1><p class="lead">36道情境题，测出你是哪一款研究生学术人格：西游组、三国组、红楼组、孔乙己，还有DDL战士和荒岛求生派。娱乐向，但句句扎心。</p></header>
+<header><div class="badge">🧑‍🔬 研究生生存学 × 学术人格</div><h1>研究生<br>学术人格测验</h1><p class="lead">36道情境题，测出你是哪一款研究生学术人格：西游组、三国组、红楼组、孔乙己，还有DDL战士和荒岛求生派。娱乐向，但句句扎心。</p><p class="lead" style="margin-top:10px;font-weight:900;color:#fff">本测验由国科大杭高院益智休闲社出品</p></header>
 <main class="wrap card">
 <section id="intro" class="intro">
   <div><h2>你的论文灵魂是什么形状？</h2><p>请按真实研究生状态作答。每题选择最像你的选项，系统会根据你在组会、写论文、DDL、投稿和摸鱼场景里的选择，生成你的学术角色画像、MBTI风格人物插画、匹配排行和生存建议。</p><div class="actions"><button id="startBtn">开始测评</button></div></div>
@@ -44,7 +44,7 @@ body.resultMode{overflow:auto}
 <div class="progressBox" id="progressBox"><div style="display:flex;justify-content:space-between;margin-bottom:8px;font-weight:900"><span id="stepText">第 1 题</span><span id="doneText">0%</span></div><div class="bar"><i id="bar"></i></div></div>
 <section id="quiz" class="qbox"></section>
 <section id="result" class="result"></section>
-</main><div class="foot">仅供娱乐，不构成真实人格诊断；如被扎到，请优先怪DDL。</div>
+</main><div class="foot">本测验由国科大杭高院益智休闲社出品 · 仅供娱乐，不构成真实人格诊断；如被扎到，请优先怪DDL。</div>
 <script>
 const roles={
   shaseng:{name:'学术沙僧',code:'Fe-Si',emoji:'🧘',color:'#6c7cff',traits:['组会附和机','团队润滑剂','安全牌选手'],core:'习惯照顾团队气氛，也更喜欢按熟悉流程做事；短板是独立观点和创新表达容易不足。',summary:'你是组会里的稳定器。别人抛观点，你负责点头、补一句“对对对”。你不爱冒险，也不爱冲突，适合做团队的秩序维护者，但要警惕把“好相处”活成“没声音”。',advice:['每次组会提前准备一个自己的问题。','把“我同意”升级成“我同意，因为……”。','练习提出小假设，哪怕只是一点点不同意见。']},
@@ -109,7 +109,7 @@ function drawAvatar(key){
   shaseng:'#6c7cff',huluwa:'#ff8a32',yuanhua:'#4fb7ff',aidward:'#8f7cff',liulaolao:'#54e6a4',bajie:'#ff71a8',lvbu:'#f04b68',menghuo:'#25c46f',huiguniang:'#b16cff',lubinxun:'#d59b45',sunwukong:'#ff6b2b',tangseng:'#f0b35a',lindaiyu:'#d78bff',kongyiji:'#8a7a66',caocao:'#3f6cff',nezha:'#ff4d5f'
  }[key]||'#6c7cff';
  return `<div class="realPortrait" style="--accent:${palette}">
-   <img src="./assets/${key}.png?v=202604260247" alt="${r.name} MBTI风格人物形象图" loading="eager" onerror="this.onerror=null;this.src='assets/'+key+'.png?v='+Date.now()" />
+   <img src="./assets/${key}.png?v=202604260312" alt="${r.name} MBTI风格人物形象图" loading="eager" onerror="this.onerror=null;this.src='assets/'+key+'.png?v='+Date.now()" />
    <div class="portraitCap"><b>${r.emoji} ${r.name}</b><span>MBTI风格研究生角色卡</span></div>
  </div>`
 }
