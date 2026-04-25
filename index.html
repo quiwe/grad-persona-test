@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- build:16-personas-202604260247 -->
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
@@ -108,7 +109,7 @@ function drawAvatar(key){
   shaseng:'#6c7cff',huluwa:'#ff8a32',yuanhua:'#4fb7ff',aidward:'#8f7cff',liulaolao:'#54e6a4',bajie:'#ff71a8',lvbu:'#f04b68',menghuo:'#25c46f',huiguniang:'#b16cff',lubinxun:'#d59b45',sunwukong:'#ff6b2b',tangseng:'#f0b35a',lindaiyu:'#d78bff',kongyiji:'#8a7a66',caocao:'#3f6cff',nezha:'#ff4d5f'
  }[key]||'#6c7cff';
  return `<div class="realPortrait" style="--accent:${palette}">
-   <img src="./assets/${key}.png?v=202604260053" alt="${r.name} MBTI风格人物形象图" loading="eager" onerror="this.onerror=null;this.src='assets/'+key+'.png?v='+Date.now()" />
+   <img src="./assets/${key}.png?v=202604260247" alt="${r.name} MBTI风格人物形象图" loading="eager" onerror="this.onerror=null;this.src='assets/'+key+'.png?v='+Date.now()" />
    <div class="portraitCap"><b>${r.emoji} ${r.name}</b><span>MBTI风格研究生角色卡</span></div>
  </div>`
 }
