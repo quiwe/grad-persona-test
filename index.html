@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>研究生学术人格测验</title>
+<meta name="description" content="30+题测出你的研究生学术角色：学术沙僧、葫芦娃、袁华、爱德华、刘姥姥、八戒、吕布、孟获、灰姑娘、鲁滨逊。" />
+<style>
+:root{--bg:#101226;--card:rgba(255,255,255,.88);--ink:#212039;--muted:#6b6a82;--pink:#ff5daf;--blue:#6c7cff;--cyan:#47dcff;--gold:#ffd95e;--green:#54e6a4;--red:#ff5c78;--shadow:0 24px 80px rgba(15,16,40,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 0%,#ff7cc966 0 22%,transparent 23%),radial-gradient(circle at 90% 10%,#55dfff66 0 25%,transparent 26%),linear-gradient(135deg,#151936,#2b2150 45%,#1b4661);overflow-x:hidden}.blob{position:fixed;border-radius:50%;filter:blur(35px);opacity:.55;z-index:-1;animation:float 12s ease-in-out infinite}.b1{width:220px;height:220px;background:#ff5daf;left:-50px;top:120px}.b2{width:260px;height:260px;background:#47dcff;right:-90px;bottom:80px;animation-delay:-4s}.b3{width:160px;height:160px;background:#ffd95e;left:45%;bottom:-60px;animation-delay:-7s}@keyframes float{50%{transform:translateY(-30px) translateX(20px) scale(1.08)}}
+header{padding:34px 18px 16px;text-align:center;color:white}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid #ffffff55;background:#ffffff1f;padding:8px 13px;border-radius:999px;backdrop-filter:blur(10px);font-weight:800;font-size:13px}h1{margin:18px auto 10px;max-width:900px;font-size:clamp(34px,8.5vw,78px);line-height:.95;letter-spacing:-3px;text-shadow:0 8px 38px #0007}.lead{max-width:720px;margin:0 auto;color:#ffffffd9;line-height:1.75;font-size:16px}.wrap{width:min(980px,94vw);margin:0 auto 48px}.card{background:var(--card);border:1px solid #fff;border-radius:30px;box-shadow:var(--shadow);backdrop-filter:blur(18px);overflow:hidden}.intro{padding:24px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:center}.intro h2{margin:0 0 8px;font-size:28px}.intro p{line-height:1.7;color:var(--muted)}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.mini{border-radius:18px;background:#fff9;padding:12px;font-weight:900;font-size:14px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}button{border:0;border-radius:999px;padding:13px 18px;font-size:16px;font-weight:950;cursor:pointer;color:white;background:linear-gradient(135deg,var(--pink),var(--blue));box-shadow:0 12px 28px #6c45d355;transition:.18s}button:hover{transform:translateY(-1px)}button.secondary{background:linear-gradient(135deg,#21c99a,#27a7ff)}button.ghost{background:#fff;color:var(--ink);box-shadow:0 8px 22px #0001}.progressBox{position:sticky;top:0;z-index:3;background:#ffffffd9;backdrop-filter:blur(16px);padding:12px 16px;border-bottom:1px solid #fff;display:none}.bar{height:10px;background:#e7e6f2;border-radius:999px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--cyan));border-radius:999px;transition:.25s}.qbox{display:none;padding:22px}.q{padding:18px;margin:12px 0;border-radius:24px;background:#fff;border:1px solid #eceafa}.q h3{margin:0 0 12px;font-size:17px}.opts{display:grid;gap:10px}.opt{display:flex;gap:10px;align-items:flex-start;padding:12px;border:2px solid #eceafa;border-radius:18px;cursor:pointer;background:#fbfbff;transition:.12s}.opt:hover{border-color:#bfc5ff}.opt input{margin-top:3px;accent-color:#ff5daf}.opt span{line-height:1.45}.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}.result{display:none;padding:20px}.resultTop{display:grid;grid-template-columns:320px 1fr;gap:18px;align-items:stretch}.portrait{background:linear-gradient(135deg,#fff,#fff7);border-radius:26px;display:grid;place-items:center;min-height:360px;border:1px solid #fff;overflow:hidden}.realPortrait{width:100%;height:100%;min-height:360px;display:flex;flex-direction:column;background:linear-gradient(135deg,var(--accent),#fff);border-radius:26px;overflow:hidden}.realPortrait img{width:100%;flex:1;min-height:0;object-fit:cover;display:block;background:#fff}.portraitCap{padding:12px 14px;background:rgba(255,255,255,.9);display:flex;flex-direction:column;gap:3px}.portraitCap b{font-size:18px}.portraitCap span{font-size:12px;color:#666;font-weight:800}.info{background:#fff;border-radius:26px;padding:20px;border:1px solid #f0eefb}.roleName{font-size:40px;line-height:1;margin:4px 0;color:#ff3e9f;letter-spacing:-1px}.type{display:inline-flex;border-radius:999px;padding:7px 11px;background:#f1efff;color:#5b50d6;font-weight:950;font-size:13px}.desc{line-height:1.75;color:#55546b}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.tag{border-radius:999px;background:#f7f6ff;border:1px solid #e8e5ff;padding:7px 10px;font-weight:800;font-size:13px}.sections{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}.sec{background:#fff;border-radius:22px;padding:16px;border:1px solid #f0eefb}.sec h3{margin:0 0 9px}.sec ul{margin:0;padding-left:20px;line-height:1.75;color:#56546b}.rank{margin-top:16px;background:#fff;border-radius:22px;padding:16px;border:1px solid #f0eefb}.rankrow{display:grid;grid-template-columns:90px 1fr 44px;gap:10px;align-items:center;margin:9px 0;font-weight:800}.rankbar{height:10px;background:#eeeef7;border-radius:999px;overflow:hidden}.rankbar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--pink))}.foot{text-align:center;color:#ffffffbb;font-size:13px;padding:20px}.hide{display:none!important}@media(max-width:760px){.intro,.resultTop,.sections{grid-template-columns:1fr}.roleName{font-size:34px}.portrait{min-height:300px}.mini-grid{grid-template-columns:1fr}h1{letter-spacing:-2px}.nav{position:sticky;bottom:10px;background:#ffffffcc;backdrop-filter:blur(12px);padding:10px;border-radius:22px;box-shadow:0 10px 30px #0002}}
+
+/* Mobile one-screen quiz mode */
+body.quizMode{overflow:hidden}
+body.quizMode header{display:none}
+body.quizMode .wrap{width:100vw;height:100dvh;margin:0;border-radius:0;display:flex;flex-direction:column;background:rgba(255,255,255,.94)}
+body.quizMode .progressBox{display:block;position:relative;top:auto;flex:0 0 auto;padding:10px 12px}
+body.quizMode .qbox{display:flex!important;flex:1 1 auto;min-height:0;padding:10px 12px 12px;flex-direction:column;overflow:hidden}
+body.quizMode .q{flex:1 1 auto;min-height:0;margin:0;padding:14px;border-radius:20px;display:flex;flex-direction:column;overflow:hidden}
+body.quizMode .q h3{font-size:clamp(16px,4.3vw,20px);line-height:1.35;margin:0 0 10px;flex:0 0 auto}
+body.quizMode .opts{flex:1 1 auto;min-height:0;display:grid;grid-template-rows:repeat(4,minmax(0,1fr));gap:8px}
+body.quizMode .opt{min-height:0;padding:9px 10px;border-radius:16px;align-items:center}
+body.quizMode .opt span{font-size:clamp(13px,3.7vw,16px);line-height:1.28;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+body.quizMode .nav{position:relative;bottom:auto;margin-top:10px;padding:0;background:transparent;box-shadow:none;flex:0 0 auto}
+body.quizMode .nav button{padding:11px 16px;font-size:15px}
+body.quizMode .foot{display:none}
+body.resultMode{overflow:auto}
+@media(max-width:760px){
+  header{padding:22px 14px 10px}.lead{font-size:14px;line-height:1.55}.intro{padding:18px}.intro h2{font-size:24px}.intro p{font-size:14px;line-height:1.55}.wrap{margin-bottom:18px}.card{border-radius:24px}.result{padding:12px}.resultTop{gap:12px}.sections{gap:10px}.roleName{font-size:30px}.realPortrait{min-height:280px}.portrait{min-height:280px}.sec,.rank,.info{padding:14px;border-radius:18px}.desc,.sec ul{font-size:14px;line-height:1.55}
+}
+@media(max-height:680px){body.quizMode .q h3{font-size:15px}body.quizMode .opt span{font-size:13px;-webkit-line-clamp:2}body.quizMode .opt{padding:7px 9px}body.quizMode .progressBox{padding:8px 10px}.bar{height:8px}}
+
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<header><div class="badge">🧑‍🔬 研究生生存学 × 学术人格</div><h1>研究生<br>学术人格测验</h1><p class="lead">36道情境题，测出你是学术沙僧、葫芦娃、袁华、爱德华、刘姥姥、八戒、吕布、孟获、灰姑娘还是鲁滨逊。娱乐向，但句句扎心。</p></header>
+<main class="wrap card">
+<section id="intro" class="intro">
+  <div><h2>你的论文灵魂是什么形状？</h2><p>请按真实研究生状态作答。每题选择最像你的选项，系统会根据你在组会、写论文、DDL、投稿和摸鱼场景里的选择，生成你的学术角色画像、MBTI风格人物插画和生存建议。</p><div class="actions"><button id="startBtn">开始测评</button></div></div>
+  <div class="mini-grid"><div class="mini">📄 36道情境题</div><div class="mini">🎭 10种角色</div><div class="mini">🧠 性格解读</div><div class="mini">🖼️ 自动人物卡</div></div>
+</section>
+<div class="progressBox" id="progressBox"><div style="display:flex;justify-content:space-between;margin-bottom:8px;font-weight:900"><span id="stepText">第 1 题</span><span id="doneText">0%</span></div><div class="bar"><i id="bar"></i></div></div>
+<section id="quiz" class="qbox"></section>
+<section id="result" class="result"></section>
+</main><div class="foot">仅供娱乐，不构成真实人格诊断；如被扎到，请优先怪DDL。</div>
+<script>
+const roles={
+  shaseng:{name:'学术沙僧',code:'Fe-Si',emoji:'🧘',color:'#6c7cff',traits:['组会附和机','团队润滑剂','安全牌选手'],core:'习惯照顾团队气氛，也更喜欢按熟悉流程做事；短板是独立观点和创新表达容易不足。',summary:'你是组会里的稳定器。别人抛观点，你负责点头、补一句“对对对”。你不爱冒险，也不爱冲突，适合做团队的秩序维护者，但要警惕把“好相处”活成“没声音”。',advice:['每次组会提前准备一个自己的问题。','把“我同意”升级成“我同意，因为……”。','练习提出小假设，哪怕只是一点点不同意见。']},
+  huluwa:{name:'学术葫芦娃',code:'Ne-Te',emoji:'🧩',color:'#ff8a32',traits:['七篇合一','缝合奇才','资源整合王'],core:'擅长在不同论文之间找关联，也很看重快速产出；短板是容易忽略原创边界和严谨性。',summary:'你看到文献不是文献，是乐高积木。你能把七篇旧论文拼出一篇“新故事”，效率惊人，脑洞也够用。问题是：拼得太快时，缝合线会从摘要露出来。',advice:['每次整合文献时写清“我的新增点”。','用一张图说明逻辑链，别只堆材料。','查重前先查“意义重复”。']},
+  yuanhua:{name:'学术袁华',code:'Se↓Ti',emoji:'🌊',color:'#4fb7ff',traits:['摸鱼达人','组会隐身','秋雅在哪'],core:'很容易被当下的摸鱼和即时快乐吸引；短板是学术逻辑和长期规划容易掉线。',summary:'实验室风很大，你的心很远。你对手机刷新率、外卖满减和摸鱼路线比实验流程熟。活在当下没错，但毕业不会因为你很会摸鱼就自动出现。',advice:['每天只设一个不可逃避的学术动作。','把摸鱼奖励绑定到实验/阅读之后。','用倒计时提醒自己：延毕也是会到来的。']},
+  aidward:{name:'学术爱德华',code:'Si-Te',emoji:'✂️',color:'#8f7cff',traits:['Ctrl+C/V大师','模板收藏家','剪刀手'],core:'依赖成熟模板和前人路径，也很重视快速完成任务；短板是原创思考和逻辑重构偏弱。',summary:'你不是在写论文，你是在进行文献炼成术。模板给你安全感，复制让你有进度感。可惜学术世界等价交换：省掉的思考，最后会在返修里还回来。',advice:['复制前先用自己的话写一句目的。','每段至少加入一个真实分析句。','把模板当脚手架，不当房子本身。']},
+  liulaolao:{name:'学术刘姥姥',code:'Ne-Se',emoji:'👀',color:'#54e6a4',traits:['新手小白','仪器观光客','十万个为什么'],core:'新鲜感和探索欲很强，但经验库还不够厚，所以容易对什么都好奇、什么都想问。',summary:'你进实验室像进大观园：这个会发光，那个会响，所有缩写都像咒语。你的好奇心很宝贵，只要配上记录和复盘，就会从“没见过世面”升级成“学习速度惊人”。',advice:['建立自己的实验室词典。','问问题前先写下你猜的答案。','每次操作后拍照/记步骤，沉淀经验库。']},
+  bajie:{name:'学术八戒',code:'Se-Fi',emoji:'🍰',color:'#ff71a8',traits:['茶歇雷达','退学幻想家','干饭优先'],core:'很重视即时感受和情绪状态；短板是目标规划和长期坚持经常掉线。',summary:'会议内容可能记不住，但茶歇小蛋糕的位置你永远清楚。你不是没有能力，是能量经常被“我不想干了”劫持。先把自己喂饱，再把进度救回来。',advice:['给任务设计“茶歇式奖励”。','情绪上头时不要立刻做退学决定。','用番茄钟把任务切成能入口的小块。']},
+  lvbu:{name:'学术吕布',code:'Te-Ti',emoji:'🐎',color:'#f04b68',traits:['义父识别器','现实主义者','见风使舵'],core:'很会看资源、看结果、判断利弊；短板是情感联结和关系维护容易显得功利。',summary:'谁能带飞，谁就是义父；导师放养，你立刻“岂能久居人下”。你很会找资源，也懂利益排序。请记得：学术江湖不仅看战力，也看口碑。',advice:['换方向/换合作前留下体面交接。','把资源判断和长期信誉一起算。','不要只认强者，也要经营稳定盟友。']},
+  menghuo:{name:'学术孟获',code:'Te-Ni',emoji:'🛡️',color:'#25c46f',traits:['七擒七纵','拒稿战神','越挫越勇'],core:'目标感和推进力很强，相信反复修改终会有结果；失败不太容易把你彻底打垮。',summary:'审稿人拒你一次，你改；拒你两次，你再投；拒你七次，你已经能背诵cover letter。你是学术耐久型选手，缺点是可能把硬刚误认为成长。',advice:['每次拒稿提炼三条可复用教训。','区分“坚持”与“方向错误”。','找外部读者帮你判断是否该换期刊/换叙事。']},
+  huiguniang:{name:'学术灰姑娘',code:'Se-Ni',emoji:'🕛',color:'#b16cff',traits:['DDL骑士','午夜魔法','卡点大师'],core:'平时容易活在当下、缺少提前规划；但最后期限逼近时，会突然启动危机感和爆发力。',summary:'不到十二点，魔法不会发动；不到死线前夜，你的Word不会自动打开。你有爆发力，但长期靠肾上腺素写论文，迟早南瓜马车变救护车。',advice:['把大DDL拆成三个假DDL。','先交丑稿，不等灵感降临。','用公开承诺制造外部压力。']},
+  lubinxun:{name:'学术鲁滨逊',code:'Fi-Se',emoji:'🏝️',color:'#d59b45',traits:['荒岛求生','周五信徒','蓬头垢面'],core:'很受内在情绪和当下生存状态影响；短板是长期建设和目标规划偏弱。',summary:'你在学术荒岛上醒来：今天的目标是找吃的、活下去、等周五。你很真实，也很能熬。可如果只求生不建造，荒岛永远只是荒岛。',advice:['给每周设一个“建造任务”，不是只活着。','固定睡眠和吃饭，先修复生存系统。','找一个同伴互报进度，减少孤岛感。']}
+};
+const questions=[
+ ['组会上有人提出一个你不完全懂的观点，你第一反应更像：',{shaseng:'先点头附和，保持气氛顺畅',huluwa:'联想到好几篇文献，想拼出新角度',yuanhua:'注意力飘到手机/窗外，当下先舒服',aidward:'想找一篇类似论文看看标准说法'}],
+ ['导师让你下周交一个初稿，你通常会：',{aidward:'先套已有模板，把结构快速搭起来',menghuo:'拆成任务清单，按投稿目标推进',huiguniang:'先放着，等DDL逼近再爆发',bajie:'先焦虑一下，然后想吃点好的缓缓'}],
+ ['面对陌生仪器或新方法，你更像：',{liulaolao:'兴奋地问这是什么、怎么用、能干嘛',shaseng:'等别人示范，按既定流程来',yuanhua:'看两眼觉得麻烦，先摸一会儿',huluwa:'立刻想它能和哪些旧思路组合'}],
+ ['你写论文时最依赖什么？',{aidward:'旧论文、模板和成熟表达',huluwa:'跨领域材料之间的连接和脑洞',menghuo:'清晰目标、证据链和发表导向',huiguniang:'最后期限带来的爆发力'}],
+ ['如果同门和导师意见冲突，你倾向：',{shaseng:'先照顾双方情绪，避免场面难看',lvbu:'判断哪边资源和胜算更大',menghuo:'只关心哪个方案更能推动发表',lubinxun:'别波及我，我先活下去'}],
+ ['读文献时，你最常出现的状态：',{huluwa:'看到不同论文之间的隐藏联系',aidward:'收藏可复用句式和框架',liulaolao:'好多术语都新鲜，问题越来越多',yuanhua:'读着读着切到别的页面'}],
+ ['实验连续失败后，你会：',{menghuo:'复盘参数，改完继续冲',bajie:'情绪上头，开始想退学和吃饭',lubinxun:'进入生存模式，先保证今天撑过去',yuanhua:'先逃避一下，过会儿再说'}],
+ ['你对组会发言的态度：',{shaseng:'安全补充，不抢风头不制造冲突',lvbu:'这是展示价值和争取资源的机会',liulaolao:'想问很多基础但真诚的问题',huiguniang:'没准备也能临场编出一点东西'}],
+ ['论文创新点不够时，你更可能：',{huluwa:'把几个旧方向重新组合包装',aidward:'参考相似论文怎么写创新',menghuo:'补实验/补分析，让证据更硬',bajie:'先崩溃，再找奶茶续命'}],
+ ['你一天进实验室的核心驱动力是：',{menghuo:'今天必须推进一个明确目标',liulaolao:'今天又能看到/学到新东西',bajie:'今天茶歇/午饭有什么',lubinxun:'今天也要努力活到下班'}],
+ ['别人问你“这个逻辑对吗？”你常常：',{shaseng:'先说“我觉得挺有道理”',aidward:'找模板或前人写法来对照',lvbu:'快速判断这个逻辑对我有没有利',huluwa:'提出另一个可以连接的解释'}],
+ ['你最容易被什么拖走注意力？',{yuanhua:'手机、短视频、即时娱乐',liulaolao:'新仪器、新术语、新现象',bajie:'零食、茶歇、今天吃什么',huiguniang:'不到最后一刻都没有紧迫感'}],
+ ['面对导师放养，你会：',{lvbu:'寻找更能带飞的资源或合作',menghuo:'自己设目标，照样往发表走',lubinxun:'像荒岛求生一样自我维持',yuanhua:'没人管正好摸鱼'}],
+ ['你处理任务的方式更像：',{aidward:'按旧流程复刻，稳妥完成',menghuo:'目标倒推，效率优先',shaseng:'配合团队节奏，别人需要啥我补啥',huiguniang:'前期拖延，后期极限冲刺'}],
+ ['你最受不了哪种学术场景？',{bajie:'会议很长还没有茶歇',yuanhua:'必须长时间专注听复杂逻辑',shaseng:'大家当场争得很难看',liulaolao:'没人愿意解释基础问题'}],
+ ['看到一堆旧数据，你会：',{huluwa:'想能不能拼出新故事',aidward:'想按以前格式整理成表',menghuo:'判断哪些数据能支撑投稿',lubinxun:'先看看今天有没有力气处理'}],
+ ['在一群人合作时，你最常扮演的角色是：',{shaseng:'不自觉照顾组内气氛和他人感受',bajie:'用吃喝玩笑安抚自己的情绪',lvbu:'社交主要是为了找到资源和机会',yuanhua:'我一般不太管场面，先顾好自己'}],
+ ['面对前人经验和已有模板，你更像：',{aidward:'很信任模板、惯例和前人路径',shaseng:'愿意按部就班跟随熟悉流程',huluwa:'把旧材料当成可以重新拼装的素材',liulaolao:'我经验还少，所以什么都觉得新鲜'}],
+ ['看到一堆互不相关的资料时，你会：',{huluwa:'脑子自动把不同论文连成一张网',liulaolao:'觉得什么都新鲜，问题和可能性越来越多',aidward:'更想找一个确定模板，不想发散太多',menghuo:'可以发散，但最后必须服务发表目标'}],
+ ['遇到任务和目标时，你更像：',{menghuo:'结果导向，拒稿也继续推进',lvbu:'很现实，谁能带飞就靠谁',huluwa:'为了交差，最快整合出成果',bajie:'我经常缺规划和执行力'}],
+ ['你最容易被眼前什么东西牵着走？',{yuanhua:'手机、摸鱼和即时快乐最真实',bajie:'茶歇、零食和身体感受最重要',huiguniang:'不到最后时刻不启动，但临场能爆发',liulaolao:'眼前的新仪器、新现象会强烈吸引我'}],
+ ['当情绪上来时，你通常会：',{lubinxun:'今天能不能干活，全看内在状态撑不撑得住',bajie:'不想干就是真的不想干，退学念头直接上头',shaseng:'更常压住自己，先照顾别人和场面',lvbu:'情绪不是重点，现实利益更重要'}],
+ ['想到未来结果时，你更像：',{menghuo:'隐约相信最后能中，所以反复再投',huiguniang:'最后期限临近时才突然看清危险',lvbu:'看准长期利益后立刻换策略',yuanhua:'我通常不想那么远，先过当下'}],
+ ['遇到复杂逻辑或原理时，你更像：',{shaseng:'能附和大家，但很难独立拆清楚逻辑',yuanhua:'对原理探究欲很低，很快走神',aidward:'不想重构逻辑，找现成写法最快',huluwa:'逻辑不够时，先靠故事和关联串起来'}],
+ ['如果老师问“你自己的判断是什么”，你会：',{shaseng:'有点慌，怕说错影响和谐',huluwa:'讲一个由多篇文献拼出的判断',menghuo:'给出最利于发表的判断',liulaolao:'坦诚说我还在理解，但有几个问题'}],
+ ['最像你的论文工作流是：',{aidward:'找模板—替换内容—快速成稿',huluwa:'找材料—重组概念—包装故事',menghuo:'定目标—补证据—投稿返修',huiguniang:'拖延—恐慌—通宵—提交'}],
+ ['当你说“我不行了”时，通常是因为：',{bajie:'情绪和食欲已经压过学术理智',lubinxun:'长期消耗，只剩生存本能',yuanhua:'任务太无聊，想逃离当下',menghuo:'被拒太多但我还会再爬起来'}],
+ ['你对“规则/流程”的依赖：',{aidward:'很依赖，流程和模板给我安全感',shaseng:'愿意跟着团队既有节奏走',liulaolao:'流程我还不熟，所以经常问',lvbu:'规则是工具，必要时为目标服务'}],
+ ['你在团队里的典型位置：',{shaseng:'气氛缓冲垫和安全背景板',huluwa:'材料整合和故事包装者',lvbu:'资源捕手和机会主义推进者',lubinxun:'低调求生的荒岛居民'}],
+ ['被审稿人狠狠批评后，你更像：',{menghuo:'逐条回应，越挫越勇',bajie:'破防，想退学，先吃饭',aidward:'找回复模板和相似案例',huiguniang:'拖到返修DDL前再爆发'}],
+ ['你对“长远毕业规划”的真实状态：',{menghuo:'清楚目标并持续推进',lvbu:'看资源配置和路径收益',yuanhua:'不太想，先爽当下',lubinxun:'像等一艘离岛的船'}],
+ ['你最像哪种学术能量？',{liulaolao:'新鲜感驱动',huluwa:'联想和整合驱动',menghuo:'目标和不服输驱动',bajie:'食物和情绪驱动'}],
+ ['如果没有DDL，你的效率会：',{huiguniang:'显著下降，几乎不启动',yuanhua:'被当下娱乐吞掉',aidward:'还能按模板推进一点',menghuo:'仍然按目标推进'}],
+ ['你最需要补的能力是：',{shaseng:'独立观点和逻辑表达',huluwa:'严谨性和原创边界',yuanhua:'长期规划与专注',aidward:'原创思考和逻辑重构'}],
+ ['你更像哪句内心OS？',{bajie:'先吃饭，退学的事等会儿说',lvbu:'谁能带飞，谁就是义父',huiguniang:'还早，晚上再说……啊十二点了',lubinxun:'今天先活下去，周五会救我'}],
+ ['最后，选择最符合你的研究生生存姿势：',{shaseng:'不出错、不冲突、稳稳跟上',huluwa:'能拼就拼，能整合就整合',menghuo:'拒了再投，改了再战',lubinxun:'荒岛求生，等到周五'}]
+];
+let idx=0,answers=[];const $=id=>document.getElementById(id);
+function drawAvatar(key){
+ const r=roles[key];
+ const palette={
+  shaseng:'#6c7cff',huluwa:'#ff8a32',yuanhua:'#4fb7ff',aidward:'#8f7cff',liulaolao:'#54e6a4',bajie:'#ff71a8',lvbu:'#f04b68',menghuo:'#25c46f',huiguniang:'#b16cff',lubinxun:'#d59b45'
+ }[key]||'#6c7cff';
+ return `<div class="realPortrait" style="--accent:${palette}">
+   <img src="./assets/${key}.png?v=202604260053" alt="${r.name} MBTI风格人物形象图" loading="eager" onerror="this.onerror=null;this.src='assets/'+key+'.png?v='+Date.now()" />
+   <div class="portraitCap"><b>${r.emoji} ${r.name}</b><span>MBTI风格研究生角色卡</span></div>
+ </div>`
+}
+
+function renderQ(){const quiz=$('quiz'),q=questions[idx];$('stepText').textContent=`第 ${idx+1} / ${questions.length} 题`;$('doneText').textContent=Math.round(idx/questions.length*100)+'%';$('bar').style.width=(idx/questions.length*100)+'%';quiz.innerHTML=`<div class="q"><h3>${idx+1}. ${q[0]}</h3><div class="opts">${Object.entries(q[1]).map(([k,v],i)=>`<label class="opt"><input type="radio" name="q" value="${k}" ${answers[idx]===k?'checked':''}><span>${v}</span></label>`).join('')}</div></div><div class="nav"><button class="ghost" id="prev" ${idx===0?'disabled style="opacity:.45"':''}>上一题</button><button id="next">${idx===questions.length-1?'查看结果':'下一题'}</button></div>`;quiz.querySelectorAll('input').forEach(x=>x.onchange=e=>{answers[idx]=e.target.value;setTimeout(next,120)});$('prev').onclick=()=>{if(idx>0){idx--;renderQ();scrollTo(0,0)}};$('next').onclick=next}
+function next(){if(!answers[idx]){alert('先选一个最像你的状态吧～');return}if(idx<questions.length-1){idx++;renderQ();scrollTo(0,0)}else showResult()}
+function score(){const s={};Object.keys(roles).forEach(k=>s[k]=0);answers.forEach(k=>s[k]++);return s}
+function showResult(){document.body.classList.remove('quizMode');document.body.classList.add('resultMode');const s=score();const sorted=Object.entries(s).sort((a,b)=>b[1]-a[1]);const top=sorted[0][0],r=roles[top],max=Math.max(...Object.values(s));$('quiz').style.display='none';$('progressBox').style.display='none';const res=$('result');res.style.display='block';res.innerHTML=`<div class="resultTop"><div class="portrait">${drawAvatar(top)}</div><div class="info"><span class="type">学术人格测试结果</span><h2 class="roleName">${r.emoji} ${r.name}</h2><p class="desc">${r.summary}</p><div class="tags">${r.traits.map(t=>`<span class="tag">${t}</span>`).join('')}</div><p class="desc"><b>性格倾向：</b>${r.core}</p><div class="actions"><button id="again">再测一次</button><button class="secondary" id="share">复制结果</button></div></div></div><div class="sections"><div class="sec"><h3>你的学术超能力</h3><ul>${power(top).map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="sec"><h3>生存建议</h3><ul>${r.advice.map(x=>`<li>${x}</li>`).join('')}</ul></div></div><div class="rank"><h3>角色匹配度</h3>${sorted.map(([k,v])=>`<div class="rankrow"><span>${roles[k].name.replace('学术','')}</span><div class="rankbar"><i style="width:${Math.round(v/max*100)}%"></i></div><span>${v}</span></div>`).join('')}</div>`;$('again').onclick=()=>location.reload();$('share').onclick=()=>{const text=`我的研究生学术人格是：${r.name}（${r.code}）\n${r.summary}`;navigator.clipboard?.writeText(text);alert('结果已复制～')};scrollTo(0,0)}
+function power(k){return {shaseng:['稳定团队气氛，让组会不至于爆炸。','流程感强，适合维护规范和协作节奏。','只要开始表达观点，会很快变成可靠合作者。'],huluwa:['跨文献整合能力强，能把材料讲成故事。','效率高，擅长从混乱信息里找结构。','适合综述、交叉学科、选题包装。'],yuanhua:['当下感强，擅长发现生活里的快乐入口。','危机没来时心态稳定，不容易过度焦虑。','若能绑定外部监督，潜力会突然上线。'],aidward:['熟悉范式，能快速搭建论文骨架。','执行目标明确，交付速度快。','适合做格式、规范、文献脉络整理。'],liulaolao:['好奇心强，学习初期吸收面很广。','敢问问题，能快速补齐盲区。','新鲜感会带来持续探索动力。'],bajie:['知道照顾即时感受，不会把自己逼到彻底宕机。','社交与茶歇雷达强，适合发现会议信息差。','把奖励机制设计好后，执行力会提升。'],lvbu:['资源嗅觉敏锐，懂得选择高收益路径。','判断利弊快，擅长寻找助力。','适合项目推进、合作谈判和机会捕捉。'],menghuo:['抗拒稿能力强，能持续迭代。','目标感明确，越挫越勇。','适合长周期投稿、实验攻坚和返修拉扯。'],huiguniang:['短期爆发力惊人，压线时能进入战斗状态。','临场整合能力强，能在混乱中抓重点。','若提前启动，会非常能打。'],lubinxun:['韧性强，能在低资源状态下撑住。','对真实需求敏感，知道先保障生存。','一旦建立秩序，会从求生者变建设者。']}[k]}
+$('startBtn').onclick=()=>{document.body.classList.add('quizMode');document.body.classList.remove('resultMode');$('intro').style.display='none';$('quiz').style.display='block';$('progressBox').style.display='block';renderQ();scrollTo(0,0)};
+</script>
+</body></html>
