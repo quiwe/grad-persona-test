@@ -46,7 +46,7 @@ body.resultMode{overflow:auto}
 <header><div class="badge">🧑‍🔬 研究生生存学 × 学术人格</div><h1>研究生<br>学术人格测验</h1><p class="lead">36道情境题，测出你是哪一款研究生学术人格：西游组、三国组、红楼组、孔乙己，还有DDL战士和荒岛求生派。娱乐向，但句句扎心。</p><p class="lead" style="margin-top:10px;font-weight:900;color:#fff">本测验由国科大杭高院益智休闲社出品</p></header>
 <main class="wrap card">
 <section id="intro" class="intro">
-  <div><h2>你的论文灵魂是什么形状？</h2><p>请按真实研究生状态作答。每题选择最像你的选项，系统会根据你在组会、写论文、DDL、投稿和摸鱼场景里的选择，生成你的学术角色画像、MBTI风格人物插画、匹配排行和生存建议。</p><div class="actions"><button id="startBtn">开始测评</button></div></div>
+  <div><h2>你的论文灵魂是什么形状？</h2><p>请按真实研究生状态作答。别想太久，选第一反应，不选“应该怎么做”。系统会根据你在组会、写论文、DDL、投稿和摸鱼场景里的选择，生成你的学术角色画像、MBTI风格人物插画、匹配排行和生存建议。</p><div class="actions"><button id="startBtn">开始测评</button></div></div>
   <div class="mini-grid"><div class="mini">📄 36道情境题</div><div class="mini">🎭 16种角色</div><div class="mini">🧠 性格解读</div><div class="mini">🖼️ 自动人物卡</div></div>
 </section>
 <div class="progressBox" id="progressBox"><div style="display:flex;justify-content:space-between;margin-bottom:8px;font-weight:900"><span id="stepText">第 1 题</span><span id="doneText">0%</span></div><div class="bar"><i id="bar"></i></div></div>
@@ -57,8 +57,8 @@ body.resultMode{overflow:auto}
 <div class="imageModal" id="imageModal" aria-hidden="true">
   <div class="imageModalBox">
     <img class="imageModalImg" id="resultImagePreview" alt="生成的测评结果图" />
-    <div class="imageModalHint">结果图已生成：可先点“分享图片”调出分享面板；也可以点“打开大图”后长按保存到手机。</div>
-    <div class="imageModalActions"><button class="ghost" id="closeImageModal">关闭</button><button class="secondary" id="shareImageAgain">分享图片</button><button class="secondary" id="downloadImageAgain">打开大图</button></div>
+    <div class="imageModalHint">结果图已生成：点击“分享图片”或者长按图片保存</div>
+    <div class="imageModalActions"><button class="ghost" id="closeImageModal">关闭</button><button class="secondary" id="shareImageAgain">分享图片</button></div>
   </div>
 </div>
 <script>
@@ -71,7 +71,7 @@ const roles={
   bajie:{name:'学术八戒',code:'Se-Fi',emoji:'🍰',color:'#ff71a8',traits:['茶歇雷达','退学幻想家','干饭优先'],core:'很重视即时感受和情绪状态；短板是目标规划和长期坚持经常掉线。',summary:'会议内容可能记不住，但茶歇小蛋糕的位置你永远清楚。你不是没有能力，是能量经常被“我不想干了”劫持。先把自己喂饱，再把进度救回来。',advice:['给任务设计“茶歇式奖励”。','情绪上头时不要立刻做退学决定。','用番茄钟把任务切成能入口的小块。']},
   lvbu:{name:'学术吕布',code:'Te-Ti',emoji:'🐎',color:'#f04b68',traits:['义父识别器','现实主义者','见风使舵'],core:'很会看资源、看结果、判断利弊；短板是情感联结和关系维护容易显得功利。',summary:'谁能带飞，谁就是义父；导师放养，你立刻“岂能久居人下”。你很会找资源，也懂利益排序。请记得：学术江湖不仅看战力，也看口碑。',advice:['换方向/换合作前留下体面交接。','把资源判断和长期信誉一起算。','不要只认强者，也要经营稳定盟友。']},
   menghuo:{name:'学术孟获',code:'Te-Ni',emoji:'🛡️',color:'#25c46f',traits:['七擒七纵','拒稿战神','越挫越勇'],core:'目标感和推进力很强，相信反复修改终会有结果；失败不太容易把你彻底打垮。',summary:'审稿人拒你一次，你改；拒你两次，你再投；拒你七次，你已经能背诵cover letter。你是学术耐久型选手，缺点是可能把硬刚误认为成长。',advice:['每次拒稿提炼三条可复用教训。','区分“坚持”与“方向错误”。','找外部读者帮你判断是否该换期刊/换叙事。']},
-  huiguniang:{name:'学术灰姑娘',code:'Se-Ni',emoji:'🕛',color:'#b16cff',traits:['DDL骑士','午夜魔法','卡点大师'],core:'平时容易活在当下、缺少提前规划；但最后期限逼近时，会突然启动危机感和爆发力。',summary:'不到十二点，魔法不会发动；不到死线前夜，你的Word不会自动打开。你有爆发力，但长期靠肾上腺素写论文，迟早南瓜马车变救护车。',advice:['把大DDL拆成三个假DDL。','先交丑稿，不等灵感降临。','用公开承诺制造外部压力。']},
+  huiguniang:{name:'学术灰姑娘',code:'Se-Ni',emoji:'🕛',color:'#b16cff',traits:['DDL骑士','午夜魔法','卡点大师'],core:'平时容易活在当下、缺少提前规划；但最后期限逼近时，会突然启动危机感和爆发力。',summary:'不到十二点，魔法不会发动；不到死线前夜，你的文档不会自动打开。你有爆发力，但长期靠肾上腺素写论文，迟早南瓜马车变救护车。',advice:['把大DDL拆成三个小DDL。','先交丑稿，不等灵感降临。','用公开承诺制造外部压力。']},
   lubinxun:{name:'学术鲁滨逊',code:'Fi-Se',emoji:'🏝️',color:'#d59b45',traits:['荒岛求生','周五信徒','蓬头垢面'],core:'很受内在情绪和当下生存状态影响；短板是长期建设和目标规划偏弱。',summary:'你在学术荒岛上醒来：今天的目标是找吃的、活下去、等周五。你很真实，也很能熬。可如果只求生不建造，荒岛永远只是荒岛。',advice:['给每周设一个“建造任务”，不是只活着。','固定睡眠和吃饭，先修复生存系统。','找一个同伴互报进度，减少孤岛感。']},
   sunwukong:{name:'学术孙悟空',code:'Ne-Te',emoji:'🐒',color:'#ff6b2b',traits:['反骨天才','组会斗战胜佛','审稿人克星'],core:'想法爆发、战斗力强，敢挑战权威；短板是容易过度刚、忽略合作气氛。',summary:'你是组会里的齐天大圣，旧范式压不住你，审稿人也休想轻易把你关进五指山。你有破局能力，但别每次都把会议室打成花果山。',advice:['怼人前先把证据链补满。','把反骨变成建设性方案。','给合作者留台阶，战斗力会更持久。']},
   tangseng:{name:'学术唐僧',code:'Ni-Fe',emoji:'📿',color:'#f0b35a',traits:['方法论念经','PPT布道者','落地偏慢'],core:'擅长讲愿景、讲体系、讲意义，也很在意团队价值；短板是行动落地和快速试错偏慢。',summary:'你不是不努力，你是在给每个实验建立世界观。你的PPT像经书，逻辑像取经路线图；问题是妖怪都到了，实验还没开跑。',advice:['每个宏大愿景配一个今天能做的小动作。','少讲三页背景，多做一次验证。','把“意义”落到可交付结果上。']},
@@ -81,42 +81,42 @@ const roles={
   nezha:{name:'学术哪吒',code:'Se-Fi',emoji:'🔥',color:'#ff4d5f',traits:['叛逆选题','危险实验','规则边缘'],core:'行动冲、主见强，敢做别人不敢碰的方向；短板是容易和规则、流程发生冲突。',summary:'你天生不爱走寻常路，越被说“不行”越想试试。你能炸出新东西，也可能真的把实验室炸出新东西。',advice:['冒险前先写安全边界。','把叛逆包装成可验证假设。','保留锋芒，但别忽略规则成本。']}
 };
 const questions=[
- ['组会上有人提出一个你不完全懂的观点，你第一反应更像：',{shaseng:'先点头附和，保持气氛顺畅',sunwukong:'先判断哪里不对，想直接开辩',yuanhua:'注意力飘到手机/窗外，当下先舒服',aidward:'想找一篇类似论文看看标准说法'}],
- ['导师让你下周交一个初稿，你通常会：',{aidward:'先套已有模板，把结构快速搭起来',menghuo:'拆成任务清单，按投稿目标推进',huiguniang:'先放着，等DDL逼近再爆发',tangseng:'先整理背景意义和完整路线图'}],
- ['面对陌生仪器或新方法，你更像：',{liulaolao:'兴奋地问这是什么、怎么用、能干嘛',nezha:'越新越想上手试，先冲再说',yuanhua:'看两眼觉得麻烦，先摸一会儿',huluwa:'立刻想它能和哪些旧思路组合'}],
- ['你写论文时最依赖什么？',{aidward:'旧论文、模板和成熟表达',huluwa:'跨领域材料之间的连接和脑洞',menghuo:'清晰目标、证据链和发表导向',lindaiyu:'文字质感、表达细节和内在感觉'}],
- ['如果同门和导师意见冲突，你倾向：',{shaseng:'先照顾双方情绪，避免场面难看',lvbu:'判断哪边资源和胜算更大',sunwukong:'谁逻辑不对我就怼谁',lubinxun:'别波及我，我先活下去'}],
- ['读文献时，你最常出现的状态：',{huluwa:'看到不同论文之间的隐藏联系',kongyiji:'开始纠结概念定义和术语源流',liulaolao:'好多术语都新鲜，问题越来越多',yuanhua:'读着读着切到别的页面'}],
- ['实验连续失败后，你会：',{menghuo:'复盘参数，改完继续冲',bajie:'情绪上头，开始想退学和吃饭',lubinxun:'进入生存模式，先保证今天撑过去',nezha:'换个更刺激的办法再试一次'}],
- ['你对组会发言的态度：',{shaseng:'安全补充，不抢风头不制造冲突',lvbu:'这是展示价值和争取资源的机会',tangseng:'我想把问题上升到方法论层面讲清楚',huiguniang:'没准备也能临场编出一点东西'}],
- ['论文创新点不够时，你更可能：',{huluwa:'把几个旧方向重新组合包装',aidward:'参考相似论文怎么写创新',menghuo:'补实验/补分析，让证据更硬',sunwukong:'直接推翻旧框架，换个更猛的说法'}],
- ['你一天进实验室的核心驱动力是：',{menghuo:'今天必须推进一个明确目标',liulaolao:'今天又能看到/学到新东西',bajie:'今天茶歇/午饭有什么',caocao:'今天要把项目版图往前推一格'}],
- ['别人问你“这个逻辑对吗？”你常常：',{shaseng:'先说“我觉得挺有道理”',kongyiji:'先检查概念和定义是否严谨',lvbu:'快速判断这个逻辑对我有没有利',huluwa:'提出另一个可以连接的解释'}],
- ['你最容易被什么拖走注意力？',{yuanhua:'手机、短视频、即时娱乐',liulaolao:'新仪器、新术语、新现象',bajie:'零食、茶歇、今天吃什么',huiguniang:'不到最后一刻都没有紧迫感'}],
- ['面对导师放养，你会：',{lvbu:'寻找更能带飞的资源或合作',menghuo:'自己设目标，照样往发表走',lubinxun:'像荒岛求生一样自我维持',caocao:'自己搭班子、排计划、推项目'}],
- ['你处理任务的方式更像：',{aidward:'按旧流程复刻，稳妥完成',menghuo:'目标倒推，效率优先',shaseng:'配合团队节奏，别人需要啥我补啥',huiguniang:'前期拖延，后期极限冲刺'}],
- ['你最受不了哪种学术场景？',{bajie:'会议很长还没有茶歇',yuanhua:'必须长时间专注听复杂逻辑',shaseng:'大家当场争得很难看',lindaiyu:'别人一句粗暴评价把我整天心情打碎'}],
- ['看到一堆旧数据，你会：',{huluwa:'想能不能拼出新故事',aidward:'想按以前格式整理成表',menghuo:'判断哪些数据能支撑投稿',kongyiji:'先确认指标、定义和来源是否规范'}],
- ['在一群人合作时，你最常扮演的角色是：',{shaseng:'不自觉照顾组内气氛和他人感受',caocao:'分工、排期、资源调度全安排上',lvbu:'社交主要是为了找到资源和机会',yuanhua:'我一般不太管场面，先顾好自己'}],
- ['面对前人经验和已有模板，你更像：',{aidward:'很信任模板、惯例和前人路径',shaseng:'愿意按部就班跟随熟悉流程',sunwukong:'前人框架不一定对，我想拆了重来',liulaolao:'我经验还少，所以什么都觉得新鲜'}],
- ['看到一堆互不相关的资料时，你会：',{huluwa:'脑子自动把不同论文连成一张网',liulaolao:'觉得什么都新鲜，问题和可能性越来越多',tangseng:'试着整理成一条完整的路线和意义',menghuo:'可以发散，但最后必须服务发表目标'}],
- ['遇到任务和目标时，你更像：',{menghuo:'结果导向，拒稿也继续推进',lvbu:'很现实，谁能带飞就靠谁',caocao:'先搭组织结构和推进机制',bajie:'我经常缺规划和执行力'}],
- ['你最容易被眼前什么东西牵着走？',{yuanhua:'手机、摸鱼和即时快乐最真实',bajie:'茶歇、零食和身体感受最重要',huiguniang:'不到最后时刻不启动，但临场能爆发',nezha:'刺激、危险、别人不敢做的新东西'}],
- ['当情绪上来时，你通常会：',{lubinxun:'今天能不能干活，全看内在状态撑不撑得住',bajie:'不想干就是真的不想干，退学念头直接上头',lindaiyu:'一句评价能让我反复想很久',lvbu:'情绪不是重点，现实利益更重要'}],
- ['想到未来结果时，你更像：',{menghuo:'隐约相信最后能中，所以反复再投',huiguniang:'最后期限临近时才突然看清危险',caocao:'提前布局资源，准备打长期战',yuanhua:'我通常不想那么远，先过当下'}],
- ['遇到复杂逻辑或原理时，你更像：',{shaseng:'能附和大家，但很难独立拆清楚逻辑',yuanhua:'对原理探究欲很低，很快走神',kongyiji:'越复杂越想把术语和定义抠清楚',huluwa:'逻辑不够时，先靠故事和关联串起来'}],
- ['如果老师问“你自己的判断是什么”，你会：',{shaseng:'有点慌，怕说错影响和谐',sunwukong:'直接说我的判断，错了也能辩',menghuo:'给出最利于发表的判断',lindaiyu:'先确认措辞够不够准确、会不会被误解'}],
- ['最像你的论文工作流是：',{aidward:'找模板—替换内容—快速成稿',huluwa:'找材料—重组概念—包装故事',menghuo:'定目标—补证据—投稿返修',huiguniang:'拖延—恐慌—通宵—提交'}],
- ['当你说“我不行了”时，通常是因为：',{bajie:'情绪和食欲已经压过学术理智',lubinxun:'长期消耗，只剩生存本能',lindaiyu:'负面反馈让我内耗到动不了',menghuo:'被拒太多但我还会再爬起来'}],
- ['你对“规则/流程”的依赖：',{aidward:'很依赖，流程和模板给我安全感',shaseng:'愿意跟着团队既有节奏走',nezha:'规则可以参考，但不能困住我',lvbu:'规则是工具，必要时为目标服务'}],
- ['你在团队里的典型位置：',{shaseng:'气氛缓冲垫和安全背景板',huluwa:'材料整合和故事包装者',caocao:'项目统筹和进度压迫者',lubinxun:'低调求生的荒岛居民'}],
- ['被审稿人狠狠批评后，你更像：',{menghuo:'逐条回应，越挫越勇',bajie:'破防，想退学，先吃饭',lindaiyu:'被语气刺伤，先emo一阵',huiguniang:'拖到返修DDL前再爆发'}],
- ['你对“长远毕业规划”的真实状态：',{menghuo:'清楚目标并持续推进',caocao:'看资源配置和项目版图',yuanhua:'不太想，先爽当下',lubinxun:'像等一艘离岛的船'}],
- ['你最像哪种学术能量？',{liulaolao:'新鲜感驱动',huluwa:'联想和整合驱动',sunwukong:'反骨和战斗欲驱动',bajie:'食物和情绪驱动'}],
- ['如果没有DDL，你的效率会：',{huiguniang:'显著下降，几乎不启动',yuanhua:'被当下娱乐吞掉',tangseng:'继续完善意义和框架，但未必动手',menghuo:'仍然按目标推进'}],
- ['你最需要补的能力是：',{shaseng:'独立观点和逻辑表达',huluwa:'严谨性和原创边界',kongyiji:'把理论变成实际进度',aidward:'原创思考和逻辑重构'}],
- ['你更像哪句内心OS？',{bajie:'先吃饭，退学的事等会儿说',lvbu:'谁能带飞，谁就是义父',huiguniang:'还早，晚上再说……啊十二点了',nezha:'不让我做？那我更想试试'}],
- ['最后，选择最符合你的研究生生存姿势：',{sunwukong:'金箍棒一挥，先把旧框架打碎',tangseng:'拿出路线图，开始讲取经意义',caocao:'整合兵马粮草，准备打一场硬仗',lubinxun:'荒岛求生，等到周五'}]
+ ['组会上听到一个你不太懂的观点，你第一秒更像：',{kongyiji:'先卡在一个词上，想确认它到底怎么定义',sunwukong:'皱一下眉，想立刻问哪里不对',yuanhua:'眼神开始飘，等别人先接话',aidward:'马上想搜一篇论文对照一下'}],
+ ['导师说下周交初稿，你关掉聊天框后的第一反应是：',{aidward:'先打开以前的初稿或模板',kongyiji:'先纠结题目概念和边界能不能站住',huiguniang:'心里一紧，但先把窗口关掉',tangseng:'先想开头怎么把意义讲大一点'}],
+ ['第一次见到陌生仪器或新方法，你更可能：',{liulaolao:'围着看，忍不住问这是什么怎么用',nezha:'手已经想碰按钮，先试一下再说',yuanhua:'站旁边看看，太麻烦就先撤',huluwa:'脑子开始想它能和哪个想法搭配'}],
+ ['论文写不动时，你通常先做什么？',{aidward:'翻几篇类似论文，看看别人怎么写',huluwa:'把零散材料摊开，试着拼新故事',tangseng:'先新建一页，把大纲和路线图重画一遍',lindaiyu:'盯着句子改来改去，想写得顺一点'}],
+ ['同门和导师意见冲突时，你下意识会：',{shaseng:'先打圆场，让现场别太僵',lvbu:'先看站哪边对结果和资源更有利',sunwukong:'先判断谁说得更离谱',lubinxun:'降低存在感，别让自己被点名'}],
+ ['读文献读到一半，你最常发生的是：',{huluwa:'突然把两篇论文连到一起',kongyiji:'卡在一个术语上，非要查清楚',liulaolao:'连续打开新页面，越查问题越多',yuanhua:'读两段就想切到别的东西'}],
+ ['实验又失败了一次，你第一动作更像：',{menghuo:'打开记录本，改参数准备再跑',bajie:'先坐下叹气，想吃点东西缓缓',lubinxun:'先把今天最容易的部分做完保命',nezha:'想换个更野的办法试试'}],
+ ['轮到你组会发言时，你更像：',{shaseng:'只补充稳妥内容，不主动开战',lvbu:'心里想着这是展示自己的机会',tangseng:'一开口就想先铺背景和路线图',lindaiyu:'边说边担心措辞不够准确'}],
+ ['发现论文创新点不够，你第一反应是：',{nezha:'想换个更冒险但更有辨识度的说法',aidward:'翻相似论文，看它们怎么包装',menghuo:'补数据补图，让结果更硬',sunwukong:'干脆换个更敢说的论点'}],
+ ['你进实验室那一刻，最容易被什么驱动？',{menghuo:'今天要把一个具体任务推进掉',liulaolao:'今天也许能看到没见过的东西',bajie:'先看看咖啡、午饭和休息怎么安排',caocao:'先打开表格看谁的进度卡住了'}],
+ ['别人问你“这个逻辑对吗？”你嘴上最可能先说：',{shaseng:'“嗯，有道理，我再想想。”',kongyiji:'“先看这个概念怎么定义。”',lvbu:'“这套说法最后能不能过？”',tangseng:'“先放回整条研究路线里看。”'}],
+ ['你最容易被什么打断学习状态？',{yuanhua:'手机一亮，手已经伸过去了',liulaolao:'旁边出现一个新名词，就想查一下',lubinxun:'身体一累，就只想保最低运转',huiguniang:'心里觉得还早，于是先放一放'}],
+ ['导师放养一段时间后，你更可能先做什么？',{lvbu:'去问师兄师姐，找更有效的路子',nezha:'没人管我正好试试自己的野路子',lubinxun:'先排个最低限度作息，别彻底掉线',caocao:'拉个表，把项目和人都重新排一遍'}],
+ ['一个任务刚到手，你最自然的开局是：',{aidward:'先找操作流程、模板或以前的做法',menghuo:'先写结果、截止时间和下一步',lindaiyu:'先担心做出来会不会被评价不好',huiguniang:'先记下来，等压力近一点再启动'}],
+ ['下面哪种场景最容易让你心里“关机”？',{bajie:'会很长，没吃没喝还不能休息',sunwukong:'听到站不住脚的话还不能反驳',shaseng:'大家当面吵起来，气氛很冲',lindaiyu:'一句评价很刺，脑子反复回放'}],
+ ['看到一堆旧数据，你手会先往哪儿动？',{tangseng:'先在纸上写一句：它们要证明什么',aidward:'打开表格，先按格式整理好',menghuo:'圈出最可能放进论文的结果',kongyiji:'先查每个指标到底怎么算的'}],
+ ['多人合作时，你最常自然滑到哪个位置？',{kongyiji:'先确认大家说的是不是同一个概念',caocao:'开始建表、分工、催节点',lvbu:'先找最关键的人聊清楚',yuanhua:'把自己那块做完，别的先不管'}],
+ ['看到前人模板，你第一反应更像：',{aidward:'太好了，可以照着结构先做',shaseng:'组里一直这么来，那就跟着来',sunwukong:'这套不一定对，我想改改看',liulaolao:'先多看几个例子，长长见识'}],
+ ['一堆资料摆在面前，你会先：',{huluwa:'把看似无关的点连成一张图',liulaolao:'被新信息吸走，越翻越多',tangseng:'先写一个总标题，把材料往下面放',menghuo:'先问哪些材料能真的用上'}],
+ ['任务和目标压过来时，你脑内弹幕更像：',{sunwukong:'先把最不服的卡点打穿',lvbu:'这事跟谁合作最划算？',caocao:'谁做什么、什么时候交？',bajie:'我现在状态不行，晚点再说'}],
+ ['眼前出现诱惑时，最容易拽走你的是：',{yuanhua:'好玩的消息和即时反馈',bajie:'吃点喝点躺一会儿的念头',huiguniang:'倒计时还没逼到眼前的松弛感',nezha:'那个有点危险但很想试的方案'}],
+ ['情绪突然上来时，你最像：',{lubinxun:'先暂停任务，保住基本运转',bajie:'不开心就真的不想动了',lindaiyu:'一句话在脑子里来回重播',lvbu:'把情绪放旁边，先算利弊'}],
+ ['一想到未来结果，你更常冒出的念头是：',{nezha:'先做出点不一样的东西再说',huiguniang:'还没到最后，不急不急',caocao:'脑子里开始排人、排钱、排时间',yuanhua:'未来先别想，今天舒服点再说'}],
+ ['碰到复杂原理时，你第一反应更像：',{liulaolao:'哪里听不懂就想马上问一句',yuanhua:'细节太绕，想先跳过去',kongyiji:'定义不清楚我就过不去',huluwa:'先拿类比和故事把它串起来'}],
+ ['老师问“你自己的判断是什么”时，你会先：',{shaseng:'看老师表情，尽量说得委婉',sunwukong:'直接说我的判断，不对再辩',tangseng:'先从课题大故事讲起，再说判断',lindaiyu:'在脑子里改措辞，怕表达不准'}],
+ ['你的论文工作流最像哪一条？',{aidward:'下载参考稿，先把结构替换出来',huluwa:'攒材料，突然发现一个新讲法',kongyiji:'先抠清关键概念，再敢往下写',huiguniang:'拖着拖着，最后通宵交出去'}],
+ ['你说“我不行了”的时候，通常是：',{caocao:'任务堆太满，脑子先开始重新排兵布阵',lubinxun:'整个人只剩维持生存模式',lindaiyu:'被一句负面反馈困住了',menghuo:'又被打回来了，但还是打开文档'}],
+ ['面对规则和流程，你的第一反应是：',{aidward:'没有模板我会有点慌',shaseng:'先问组里平时怎么做',nezha:'先看一眼，然后试自己的办法',lvbu:'先看它能不能帮我达成目标'}],
+ ['你在团队里最像哪种自动位置？',{shaseng:'发现气氛不对，赶紧救场',huluwa:'把大家的材料讲成一个故事',caocao:'盯进度、排时间、催交付',lubinxun:'安静做完自己的部分，别掉队'}],
+ ['审稿意见很狠时，你最可能先：',{menghuo:'复制意见，做回复表逐条拆',bajie:'关掉文件，先点杯喝的压压惊',lindaiyu:'盯着那句难听的话难受半天',huiguniang:'先放着，等返修截止前再冲'}],
+ ['提到长远毕业规划，你真实反应更像：',{menghuo:'脑子里有时间线和阶段目标',caocao:'先想哪几个项目能凑成毕业包',lindaiyu:'想到毕业评价和答辩就先紧张',lubinxun:'先撑过这一周再说'}],
+ ['哪件事最容易让你突然有学术能量？',{liulaolao:'听到一个没见过的新东西',huluwa:'两个无关材料突然接上了',sunwukong:'有人说这个方向不可能',bajie:'有奖励、有休息、状态回来了'}],
+ ['如果完全没有DDL，你更可能：',{huiguniang:'文档先不打开，等有压力再说',yuanhua:'被更有趣的东西带走',tangseng:'PPT框架越改越完整，正文还没动',nezha:'没人催时反而想开个新坑试试'}],
+ ['别人提醒你一个痛点时，哪句最像戳中你？',{shaseng:'“你要更敢说自己的判断。”',huluwa:'“你先别发散，边界讲清楚。”',kongyiji:'“别只讲概念，拿出点结果。”',liulaolao:'“别光觉得新鲜，先沉淀成经验。”'}],
+ ['下面哪句心里话最像你？',{bajie:'先让我吃口饭再说。',lvbu:'这事跟谁混最赚？',huiguniang:'还来得及吧，到点我就冲。',nezha:'你越拦我，我越想试。'}],
+ ['最后，选一个最像你的生存姿势：',{sunwukong:'先把旧说法打翻，看看问题在哪',tangseng:'先画路线图，把意义讲清楚',caocao:'先拉人排期，把仗打起来',lubinxun:'先活过这周，再慢慢往前挪'}]
 ];
 let idx=0,answers=[];const $=id=>document.getElementById(id);const ASSET_VERSION='202604260952';const roleImageCache=new Map();const roleImageSrc=key=>`./assets/optimized/${key}.webp?v=${ASSET_VERSION}`;const roleImageFallback=key=>`./assets/${key}.png?v=202604260312`;
 function drawAvatar(key){
@@ -135,6 +135,7 @@ function next(){if(!answers[idx]){alert('先选一个最像你的状态吧～');
 function score(){const s={};Object.keys(roles).forEach(k=>s[k]=0);answers.forEach(k=>s[k]++);return s}
 function wrapCanvasText(ctx,text,x,y,maxWidth,lineHeight,maxLines=99){const chars=[...String(text)];let line='',lines=[];for(const ch of chars){const next=line+ch;if(ctx.measureText(next).width>maxWidth&&line){lines.push(line);line=ch;if(lines.length>=maxLines)break}else line=next}if(lines.length<maxLines&&line)lines.push(line);if(lines.length===maxLines&&ctx.measureText(lines[lines.length-1]).width>maxWidth-20){lines[lines.length-1]=lines[lines.length-1].slice(0,-1)+'…'}lines.forEach((l,i)=>ctx.fillText(l,x,y+i*lineHeight));return y+lines.length*lineHeight}
 function roundCanvasRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+function drawCanvasCoverImage(ctx,img,x,y,w,h,scaleBoost=1){const scale=Math.max(w/img.width,h/img.height)*scaleBoost,dw=img.width*scale,dh=img.height*scale;ctx.drawImage(img,x+(w-dw)/2,y+(h-dh)/2,dw,dh)}
 function loadImageForCanvas(src,crossOrigin=false){if(roleImageCache.has(src))return roleImageCache.get(src);const promise=new Promise(resolve=>{const img=new Image();if(crossOrigin)img.crossOrigin='anonymous';img.decoding='async';img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=src});roleImageCache.set(src,promise);return promise}
 function preloadRoleImages(keys=Object.keys(roles)){for(const key of keys){loadImageForCanvas(roleImageSrc(key));}}
 function getTestUrl(){return new URL(location.pathname, location.origin).href}
@@ -144,15 +145,16 @@ async function drawQrCode(ctx,text,x,y,size){const img=await loadImageForCanvas(
 function drawFallbackQrCode(ctx,text,x,y,size){const modules=29;let seed=0;for(const ch of text){seed=(seed*131+ch.charCodeAt(0))>>>0}const cell=size/modules;ctx.fillStyle='#fff';roundCanvasRect(ctx,x,y,size,size,18);ctx.fill();ctx.fillStyle='#17172c';function bit(r,c){if(r<0||c<0||r>=modules||c>=modules)return false;let v=(seed ^ (r*1103515245) ^ (c*12345) ^ ((r*c)<<3))>>>0;v^=v>>>13;v=(v*1274126177)>>>0;return (v&7)<3}function finder(fr,fc){ctx.fillRect(x+fc*cell,y+fr*cell,7*cell,7*cell);ctx.fillStyle='#fff';ctx.fillRect(x+(fc+1)*cell,y+(fr+1)*cell,5*cell,5*cell);ctx.fillStyle='#17172c';ctx.fillRect(x+(fc+2)*cell,y+(fr+2)*cell,3*cell,3*cell)}finder(2,2);finder(2,20);finder(20,2);for(let r=0;r<modules;r++){for(let c=0;c<modules;c++){const inFinder=(r>=2&&r<9&&c>=2&&c<9)||(r>=2&&r<9&&c>=20&&c<27)||(r>=20&&r<27&&c>=2&&c<9);if(inFinder)continue;if(r===10||c===10||bit(r,c)){ctx.fillRect(x+c*cell,y+r*cell,Math.ceil(cell),Math.ceil(cell))}}}ctx.fillStyle='#fff';ctx.fillRect(x+10*cell,y+10*cell,9*cell,9*cell);ctx.fillStyle='#ff5daf';ctx.font=`900 ${Math.round(size*.16)}px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('测',x+size/2,y+size/2)}
 async function createResultImage(roleKey,sorted){
  const r=roles[roleKey];const W=1080,H=1680;const canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;const ctx=canvas.getContext('2d');
+ let img=await loadImageForCanvas(roleImageSrc(roleKey));if(!img)img=await loadImageForCanvas(roleImageFallback(roleKey));
  const grad=ctx.createLinearGradient(0,0,W,H);grad.addColorStop(0,'#151936');grad.addColorStop(.48,'#2b2150');grad.addColorStop(1,'#1b4661');ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);
- ctx.fillStyle='rgba(255,93,175,.28)';ctx.beginPath();ctx.arc(120,120,260,0,Math.PI*2);ctx.fill();ctx.fillStyle='rgba(71,220,255,.24)';ctx.beginPath();ctx.arc(980,260,300,0,Math.PI*2);ctx.fill();ctx.fillStyle='rgba(255,217,94,.18)';ctx.beginPath();ctx.arc(540,1640,260,0,Math.PI*2);ctx.fill();
+ if(img){ctx.save();ctx.filter='blur(42px) saturate(1.2)';drawCanvasCoverImage(ctx,img,-120,-120,W+240,H+240);ctx.restore();ctx.fillStyle='rgba(12,16,38,.52)';ctx.fillRect(0,0,W,H);const shade=ctx.createLinearGradient(0,0,W,H);shade.addColorStop(0,'rgba(255,93,175,.18)');shade.addColorStop(.55,'rgba(43,33,80,.30)');shade.addColorStop(1,'rgba(71,220,255,.18)');ctx.fillStyle=shade;ctx.fillRect(0,0,W,H)}else{ctx.fillStyle='rgba(255,93,175,.28)';ctx.beginPath();ctx.arc(120,120,260,0,Math.PI*2);ctx.fill();ctx.fillStyle='rgba(71,220,255,.24)';ctx.beginPath();ctx.arc(980,260,300,0,Math.PI*2);ctx.fill();ctx.fillStyle='rgba(255,217,94,.18)';ctx.beginPath();ctx.arc(540,1640,260,0,Math.PI*2);ctx.fill()}
  ctx.textAlign='center';ctx.fillStyle='rgba(255,255,255,.92)';ctx.font='900 34px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText('研究生学术人格测验',W/2,76);ctx.font='900 66px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText(`${r.emoji} ${r.name}`,W/2,156);ctx.font='800 26px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillStyle='rgba(255,255,255,.76)';ctx.fillText(`性格倾向：${r.code}`,W/2,205);
- const cardX=58,cardY=250,cardW=W-116,cardH=1260;ctx.shadowColor='rgba(0,0,0,.28)';ctx.shadowBlur=50;ctx.shadowOffsetY=22;ctx.fillStyle='rgba(255,255,255,.94)';roundCanvasRect(ctx,cardX,cardY,cardW,cardH,38);ctx.fill();ctx.shadowColor='transparent';
- let img=await loadImageForCanvas(roleImageSrc(roleKey));if(!img)img=await loadImageForCanvas(roleImageFallback(roleKey));if(img){const ix=cardX+40,iy=cardY+42,iw=360,ih=460;ctx.save();roundCanvasRect(ctx,ix,iy,iw,ih,28);ctx.clip();const scale=Math.max(iw/img.width,ih/img.height),sw=iw/scale,sh=ih/scale,sx=(img.width-sw)/2,sy=(img.height-sh)/2;ctx.drawImage(img,sx,sy,sw,sh,ix,iy,iw,ih);ctx.restore()}
+ const cardX=58,cardY=285,cardW=W-116,cardH=1260;ctx.shadowColor='rgba(0,0,0,.28)';ctx.shadowBlur=50;ctx.shadowOffsetY=22;ctx.fillStyle='rgba(255,255,255,.94)';roundCanvasRect(ctx,cardX,cardY,cardW,cardH,38);ctx.fill();ctx.shadowColor='transparent';
+ if(img){const ix=cardX+40,iy=cardY+42,iw=360,ih=460;ctx.save();roundCanvasRect(ctx,ix,iy,iw,ih,28);ctx.clip();const scale=Math.max(iw/img.width,ih/img.height),sw=iw/scale,sh=ih/scale,sx=(img.width-sw)/2,sy=(img.height-sh)/2;ctx.drawImage(img,sx,sy,sw,sh,ix,iy,iw,ih);ctx.restore()}
  ctx.textAlign='left';ctx.fillStyle='#ff3e9f';ctx.font='900 46px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText(r.name,cardX+430,cardY+72);ctx.fillStyle='#5b50d6';ctx.font='900 24px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText('你的研究生学术人格',cardX+430,cardY+112);
  let y=cardY+165;ctx.fillStyle='#55546b';ctx.font='400 28px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';y=wrapCanvasText(ctx,r.summary,cardX+430,y,cardW-490,42,5)+26;
  ctx.font='900 23px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';let tx=cardX+430;for(const t of r.traits){const tw=ctx.measureText(t).width+38;if(tx+tw>cardX+cardW-42){tx=cardX+430;y+=54}ctx.fillStyle='#f1efff';roundCanvasRect(ctx,tx,y-28,tw,44,22);ctx.fill();ctx.fillStyle='#5b50d6';ctx.fillText(t,tx+19,y+3);tx+=tw+12}
- const qrSize=132,qrX=cardX+cardW-qrSize-52,qrY=Math.max(y+24,cardY+388);const labelW=330,labelH=90,labelX=qrX-22-labelW,labelY=qrY+20;ctx.fillStyle='rgba(8,8,22,.74)';roundCanvasRect(ctx,labelX,labelY,labelW,labelH,22);ctx.fill();ctx.strokeStyle='rgba(255,255,255,.2)';ctx.lineWidth=2;ctx.stroke();ctx.textAlign='right';ctx.textBaseline='alphabetic';ctx.fillStyle='#fff';ctx.font='900 24px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText('扫码测测你的学术人格',qrX-42,qrY+56);ctx.fillStyle='rgba(255,255,255,.82)';ctx.font='800 16px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText(getTestUrl().replace(/^https?:\/\//,''),qrX-42,qrY+86);await drawQrCode(ctx,getTestUrl(),qrX,qrY,qrSize);
+ const qrSize=132,qrX=cardX+cardW-qrSize-52,qrY=Math.max(y+24,cardY+388);ctx.textAlign='right';ctx.textBaseline='alphabetic';ctx.fillStyle='#60a5fa';ctx.font='900 24px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText('扫码测试你的学术人格',qrX-42,qrY+56);ctx.fillStyle='#93c5fd';ctx.font='800 16px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText(getTestUrl().replace(/^https?:\/\//,''),qrX-42,qrY+86);await drawQrCode(ctx,getTestUrl(),qrX,qrY,qrSize);
  y=Math.max(qrY+qrSize+44,cardY+548);
  ctx.textAlign='left';ctx.textBaseline='alphabetic';ctx.fillStyle='#212039';ctx.font='900 32px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText('性格解读',cardX+44,y);y+=48;ctx.fillStyle='#56546b';ctx.font='400 27px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';y=wrapCanvasText(ctx,r.core,cardX+44,y,cardW-88,40,3)+34;
  ctx.fillStyle='#212039';ctx.font='900 32px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';ctx.fillText('生存建议',cardX+44,y);y+=48;ctx.fillStyle='#56546b';ctx.font='400 27px -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif';for(const item of r.advice){ctx.fillStyle='#ff5daf';ctx.fillText('•',cardX+48,y);ctx.fillStyle='#56546b';y=wrapCanvasText(ctx,item,cardX+82,y,cardW-126,38,1)+12}
@@ -161,13 +163,13 @@ async function createResultImage(roleKey,sorted){
 let latestResultImageUrl='',latestResultImageName='',latestResultImageBlob=null,latestResultImageFile=null;
 function openResultImageModal(canvas,blob,fileName){latestResultImageBlob=blob;latestResultImageName=fileName;latestResultImageFile=new File([blob],fileName,{type:'image/png'});latestResultImageUrl=canvas.toDataURL('image/png');$('resultImagePreview').src=latestResultImageUrl;$('imageModal').classList.add('show');$('imageModal').setAttribute('aria-hidden','false')}
 function closeResultImageModal(){$('imageModal').classList.remove('show');$('imageModal').setAttribute('aria-hidden','true')}
-async function shareLatestResultImage(){if(!latestResultImageFile)return;if(navigator.canShare&&navigator.canShare({files:[latestResultImageFile]})){try{await navigator.share({files:[latestResultImageFile],title:'我的研究生学术人格测试结果',text:'扫码测测你的学术人格'});return}catch(e){if(e?.name==='AbortError')return;console.warn(e)}}openLatestResultImage()}
+async function shareLatestResultImage(){if(!latestResultImageFile)return;if(navigator.canShare&&navigator.canShare({files:[latestResultImageFile]})){try{await navigator.share({files:[latestResultImageFile],title:'我的研究生学术人格测试结果',text:'扫码测试你的学术人格'});return}catch(e){if(e?.name==='AbortError')return;console.warn(e)}}openLatestResultImage()}
 function openLatestResultImage(){if(!latestResultImageUrl)return;const win=window.open('','_blank');const html=`<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>${latestResultImageName||'结果图'}</title><style>body{margin:0;background:#111;display:grid;place-items:center;min-height:100vh;padding:12px;color:white;font-family:-apple-system,BlinkMacSystemFont,sans-serif}img{max-width:100%;height:auto;-webkit-touch-callout:default;user-select:auto}.tip{position:fixed;left:12px;right:12px;bottom:12px;background:rgba(0,0,0,.72);border-radius:14px;padding:10px;text-align:center;font-weight:800}</style></head><body><img src="${latestResultImageUrl}" alt="测评结果图"><div class="tip">长按图片，选择保存到手机 / 分享</div></body></html>`;if(win){win.document.open();win.document.write(html);win.document.close()}else{location.href=latestResultImageUrl}}
 async function saveResultImage(roleKey,sorted){const btn=$('saveImage');const old=btn.textContent;btn.textContent='生成中…';btn.disabled=true;try{const canvas=await createResultImage(roleKey,sorted);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png',.95));const fileName=`研究生学术人格-${roles[roleKey].name}.png`;openResultImageModal(canvas,blob,fileName)}catch(e){console.error(e);alert('生成图片失败，请再试一次～')}finally{btn.textContent=old;btn.disabled=false}}
 
 function showResult(){document.body.classList.remove('quizMode');document.body.classList.add('resultMode');const s=score();const sorted=Object.entries(s).sort((a,b)=>b[1]-a[1]);const top=sorted[0][0],r=roles[top],max=Math.max(...Object.values(s));$('quiz').style.display='none';$('progressBox').style.display='none';const res=$('result');res.style.display='block';loadImageForCanvas(roleImageSrc(top));res.innerHTML=`<div class="resultTop"><div class="portrait">${drawAvatar(top)}</div><div class="info"><span class="type">学术人格测试结果</span><h2 class="roleName">${r.emoji} ${r.name}</h2><p class="desc">${r.summary}</p><div class="tags">${r.traits.map(t=>`<span class="tag">${t}</span>`).join('')}</div><p class="desc"><b>性格倾向：</b>${r.core}</p><div class="actions"><button id="again">再测一次</button><button class="secondary" id="saveImage">保存人格图</button></div></div></div><div class="sections"><div class="sec"><h3>你的学术超能力</h3><ul>${power(top).map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="sec"><h3>生存建议</h3><ul>${r.advice.map(x=>`<li>${x}</li>`).join('')}</ul></div></div><div class="rank"><h3>角色匹配度</h3>${sorted.map(([k,v])=>`<div class="rankrow"><span>${roles[k].name.replace('学术','')}</span><div class="rankbar"><i style="width:${Math.round(v/max*100)}%"></i></div><span>${v}</span></div>`).join('')}</div>`;$('again').onclick=()=>location.reload();$('saveImage').onclick=()=>saveResultImage(top,sorted);scrollTo(0,0)}
 function power(k){return {shaseng:['稳定团队气氛，让组会不至于爆炸。','流程感强，适合维护规范和协作节奏。','只要开始表达观点，会很快变成可靠合作者。'],huluwa:['跨文献整合能力强，能把材料讲成故事。','效率高，擅长从混乱信息里找结构。','适合综述、交叉学科、选题包装。'],yuanhua:['当下感强，擅长发现生活里的快乐入口。','危机没来时心态稳定，不容易过度焦虑。','若能绑定外部监督，潜力会突然上线。'],aidward:['熟悉范式，能快速搭建论文骨架。','执行目标明确，交付速度快。','适合做格式、规范、文献脉络整理。'],liulaolao:['好奇心强，学习初期吸收面很广。','敢问问题，能快速补齐盲区。','新鲜感会带来持续探索动力。'],bajie:['知道照顾即时感受，不会把自己逼到彻底宕机。','社交与茶歇雷达强，适合发现会议信息差。','把奖励机制设计好后，执行力会提升。'],lvbu:['资源嗅觉敏锐，懂得选择高收益路径。','判断利弊快，擅长寻找助力。','适合项目推进、合作谈判和机会捕捉。'],menghuo:['抗拒稿能力强，能持续迭代。','目标感明确，越挫越勇。','适合长周期投稿、实验攻坚和返修拉扯。'],huiguniang:['短期爆发力惊人，压线时能进入战斗状态。','临场整合能力强，能在混乱中抓重点。','若提前启动，会非常能打。'],lubinxun:['韧性强，能在低资源状态下撑住。','对真实需求敏感，知道先保障生存。','一旦建立秩序，会从求生者变建设者。'],sunwukong:['破局能力强，敢挑战旧框架。','遇到硬问题不怂，战斗力很高。','适合探索型选题和关键难点攻坚。'],tangseng:['擅长建立意义、路线和方法论。','能把团队拉回长期目标。','适合综述、开题、框架搭建和愿景表达。'],lindaiyu:['文字敏感度高，表达细腻。','能捕捉别人忽略的语气和质量问题。','适合写作打磨、论述优化和审美型表达。'],kongyiji:['概念意识强，定义和出处很严谨。','能守住理论边界和学术规范。','适合理论梳理、术语辨析和文献考据。'],caocao:['项目组织和资源整合能力强。','目标感明确，能把复杂任务推起来。','适合项目管理、团队协作和成果冲刺。'],nezha:['行动力强，敢碰高风险新方向。','主见鲜明，不容易被传统路线限制。','适合原型验证、探索实验和颠覆式想法。']}[k]}
-$('closeImageModal').onclick=closeResultImageModal;$('downloadImageAgain').onclick=openLatestResultImage;$('shareImageAgain').onclick=shareLatestResultImage;$('imageModal').onclick=e=>{if(e.target===$('imageModal'))closeResultImageModal()};
+$('closeImageModal').onclick=closeResultImageModal;$('shareImageAgain').onclick=shareLatestResultImage;$('imageModal').onclick=e=>{if(e.target===$('imageModal'))closeResultImageModal()};
 const warmup=()=>{preloadRoleImages();preloadQrCode()};if(window.requestIdleCallback){requestIdleCallback(warmup,{timeout:1200})}else{setTimeout(warmup,600)}
 $('startBtn').onclick=()=>{preloadRoleImages();preloadQrCode();document.body.classList.add('quizMode');document.body.classList.remove('resultMode');$('intro').style.display='none';$('quiz').style.display='block';$('progressBox').style.display='block';renderQ();scrollTo(0,0)};
 </script>
